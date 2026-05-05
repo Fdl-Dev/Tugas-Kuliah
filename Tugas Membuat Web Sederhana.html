@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>TUGAS WEB SEDERHANA</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #0056b3;
+            color: white;
+            padding: 10px 0;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .form-container {
+            background: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        h2 {
+            text-decoration: underline;
+            font-size: 18px;
+            margin-top: 0;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            padding: 5px;
+            vertical-align: top;
+        }
+
+        input[type="text"], select, textarea {
+            width: 100%;
+            padding: 4px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 80px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .footer-text {
+            display: inline-block;
+            animation: jalan-footer 15s linear infinite;
+        }
+
+        .footer-text:hover {
+            animation-play-state: paused;
+            cursor: pointer;
+        }
+
+        @keyframes jalan-footer {
+            from { transform: translateX(100vw); }
+            to { transform: translateX(-100%); }
+        }
+
+        .btn-group {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <marquee direction="left" scrollamount="7">
+            TUGAS MEMBUAT WEB SEDERHANA 
+        </marquee>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <h2>BIODATA DIRI MAHASISWA</h2>
+            <form action="#">
+                <table>
+                    <tr>
+                        <td width="30%">Nama</td>
+                        <td width="5%">:</td>
+                        <td><input type="text" name="nama"></td>
+                    </tr>
+                    <tr>
+                        <td>Jenis Kelamin</td>
+                        <td>:</td>
+                        <td>
+                            <input type="radio" name="jk" value="Pria"> Pria <br>
+                            <input type="radio" name="jk" value="Wanita"> Wanita
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tempat/tgl lahir</td>
+                        <td>:</td>
+                        <td><input type="text" name="ttl"></td>
+                    </tr>
+                    <tr>
+                        <td>Alamat</td>
+                        <td>:</td>
+                        <td><textarea name="alamat"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>Agama</td>
+                        <td>:</td>
+                        <td>
+                            <select name="agama">
+                                <option>Islam</option>
+                                <option>Kristen</option>
+                                <option>Katolik</option>
+                                <option>Hindu</option>
+                                <option>Budha</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Hobi</td>
+                        <td>:</td>
+                        <td>
+                            <input type="checkbox"> Sepakbola
+                            <input type="checkbox"> Bulutangkis
+                            <input type="checkbox"> Volley <br>
+                            <input type="checkbox"> Tenis Meja
+                            <input type="checkbox"> Lain-lain
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Kesan dan Pesan</td>
+                        <td>:</td>
+                        <td><textarea name="kesan"></textarea></td>
+                    </tr>
+                </table>
+                <div class="btn-group">
+                    <input type="submit" value="Kirim">
+                    <input type="reset" value="Reset">
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-text">
+            Universitas Linggabuana PGRI Sukabumi
+        </div>
+    </footer>
+
+</body>
+</html>
